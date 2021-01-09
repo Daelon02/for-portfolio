@@ -28,3 +28,29 @@
     width:100%;
     position:absolute;
 }
+
+.footer {
+    background-color: #141414;
+    color: #fff;
+}
+
+.footer-contacts {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 15px;
+}
+
+.grow:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  .img-size{
+      width: 470px;
+      height: 470px;
+  }
+
+  .container-fluid .container {
+    padding: 0;
+    margin: 0;
+}
