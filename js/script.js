@@ -67,4 +67,5 @@ function forms() {
 }
 
 sendForm(form);
+sendForm(contactForm);
 }
