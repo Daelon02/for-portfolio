@@ -160,7 +160,7 @@ let tab = document.querySelectorAll('.info-header-tab'),
             swiper.classList.remove('hide');
             swiper.classList.add('show');
             images.classList.add('hide');
-            images.classList.remove('show');// сохраняем значение в ключ hide
+            images.classList.remove('show');
         }
       });
 
@@ -174,4 +174,6 @@ let tab = document.querySelectorAll('.info-header-tab'),
             images.classList.add('show');
           }
       });
+
+
 });

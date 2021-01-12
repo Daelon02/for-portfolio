@@ -43,11 +43,14 @@
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
+    animation: grow 5s ease-in-out infinite;
   }
 
   .img-size{
       width: 470px;
       height: 470px;
+      border-radius: 50px;
+      padding: 30px;
   }
 
   .container-fluid .container {
@@ -104,6 +107,12 @@
         position: relative;
         top: 130px;
         left: 50px;
+      }
+
+      .skills{
+        padding: 20px;
+        right: 25px;
+        margin: 20px;
       }
 }
 
