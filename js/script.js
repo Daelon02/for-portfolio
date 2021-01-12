@@ -159,6 +159,7 @@ let tab = document.querySelectorAll('.info-header-tab'),
             swiper.classList.add('show');
             images.classList.add('hide');
             images.classList.remove('show');
+            sessionStorage.setItem('width', swiper.style.display); // сохраняем значение в ключ hide
         }
       });
 
@@ -170,6 +171,7 @@ let tab = document.querySelectorAll('.info-header-tab'),
             swiper.classList.remove('show');
             images.classList.remove('hide');
             images.classList.add('show');
+            sessionlStorage.removeItem('width', swiper.style.display);
           }
       });
 });
