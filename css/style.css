@@ -456,7 +456,7 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     z-index: 4;
     left: 50%;
-    top: 150px;
+    top: 100px;
     width: 350px;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -488,10 +488,5 @@ h1, h2, h3, h4, h5, h6 {
     color: #10c9c3;
     border: 1px solid #10c9c3;
     cursor: pointer;
-  }
-
-  .popup {
-    position: fixed;
-    top: 100px;
   }
 }

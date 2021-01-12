@@ -323,7 +323,7 @@
       position: fixed;
       z-index: 4;
       left: 50%;
-      top: 150px;
+      top: 100px;
       width: 350px;
       -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
@@ -355,9 +355,5 @@
       color: #10c9c3;
       border: 1px solid #10c9c3;
       cursor: pointer;
-    }
-    .popup {
-      position: fixed;
-      top: 100px;
     }
   }
