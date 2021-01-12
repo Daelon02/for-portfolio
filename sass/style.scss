@@ -317,3 +317,43 @@
       opacity: 1;
     }
   }
+
+  @media (max-width: 576px) {
+    .overlay .popup {
+      position: fixed;
+      z-index: 4;
+      left: 50%;
+      top: 150px;
+      width: 350px;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+    }
+
+    .overlay .popup-form__input {
+      width: 300px;
+      height: 56px;
+      position: relative;
+      left: -60px;
+      font-size: 18px;
+      background-color: #555555;
+      border: none;
+      color: #fff;
+      text-align: center;
+    }
+
+    .overlay .popup-form__btn {
+      width: 180px;
+      height: 56px;
+      position: relative;
+      left: -20px;
+      top: 10px;
+      font-size: 15px;
+      line-height: 22px;
+      margin-left: 16px;
+      background-color: transparent;
+      color: #10c9c3;
+      border: 1px solid #10c9c3;
+      cursor: pointer;
+    }
+  }

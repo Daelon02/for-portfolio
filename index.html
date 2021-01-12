@@ -76,7 +76,7 @@
           <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="bg-dark"></li>
           <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" class="bg-dark"></li>
         </ol>
-        <div class="carousel-inner" style="height: 400px; width: 375px;">
+        <div class="carousel-inner" style="height: 400px; width: 400px;">
           <div class="carousel-item active">
             <img src="img/04748.jpg" class="d-block w-100" alt="#">
             <div class="carousel-caption d-none d-md-block">
@@ -99,11 +99,11 @@
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </a>
       </div>
@@ -177,11 +177,11 @@
              <label class="popup-form__label skills-text" for="name">
              Write your name:
              </label>
-             <input class="popup-form__input" name="name" type="tel" required placeholder="Your Name">
+             <input class="popup-form__input" name="name" type="name" required placeholder="Your Name">
              <label class="popup-form__label skills-text" for="email">
               Write your email:
               </label>
-              <input class="popup-form__input" name="email" type="tel" required placeholder="Your Email">
+              <input class="popup-form__input" name="email" type="email" required placeholder="Your Email">
              <button class="button popup-form__btn">
               Send a request!
              </button>
@@ -208,14 +208,14 @@
     <form action="telegram.php" method="post" class="form" enctype="multipart/form-data">
       <div class="row col-12">
         <div class="col-6">
-          <input required type="text" name="name" class="form-control" placeholder="Your Name">
+          <input required type="name" name="name" class="form-control" placeholder="Your Name">
         </div>
         <div class="col-6">
-          <input required type="text" name="email" class="form-control mx-4" placeholder="Your Email">
+          <input required type="email" name="email" class="form-control mx-4" placeholder="Your Email">
         </div>
       </div>
       <div class="col-12 my-5">
-        <input required type="text" name="title" class="form-control" placeholder="Your Title">
+        <input required type="title" name="title" class="form-control" placeholder="Your Title">
       </div>
       <div class="form-floating">
         <textarea required class="form-control text_area" placeholder="Your Comments" id="floatingTextarea2" style="height: 100px"></textarea>
