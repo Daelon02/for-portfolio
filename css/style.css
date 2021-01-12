@@ -258,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 71px;
   line-height: 71px;
   margin: 0;
-  background-color: #c78030;
+  background-color: #10c9c3;
   color: #ffffff;
   text-transform: uppercase;
   font-size: 21px;
@@ -267,7 +267,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .overlay .popup-form {
-  background: url(../img/modal.jpg) center no-repeat;
+  background-color: #636363;
   background-size: cover;
   padding: 35px 88px 50px 88px;
   color: #fff;
@@ -294,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 56px;
   margin-top: 17px;
   font-size: 18px;
-  background-color: #c78030;
+  background-color: #555555;
   border: none;
   color: #fff;
   text-align: center;
@@ -339,15 +339,115 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 22px;
   margin-left: 16px;
   background-color: transparent;
-  color: #c78030;
-  border: 1px solid #c78030;
+  color: #10c9c3;
+  border: 1px solid #10c9c3;
   cursor: pointer;
 }
 
 .overlay .popup-form__btn:hover {
-  box-shadow: 0 0 10px #c78030;
+  box-shadow: 0 0 10px #10c9c3;
 }
 
 .description-btn {
-  background-color: blue;
+  width: 180px;
+  height: 45px;
+  line-height: 43px;
+  margin-top: 30px;
+  border: 1px solid #c78030;
+  font-size: 14px;
+  color: #c78030;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.description-btn:hover {
+  box-shadow: 0px 0px 5px #c78030;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.hide {
+  display: none;
+}
+
+.show {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: block;
+}
+
+.more-splash {
+  -webkit-animation-name: splash;
+  animation-name: splash;
+  -webkit-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+}
+
+@-webkit-keyframes splash {
+  from {
+    box-shadow: 0 0 10px #c78030;
+  }
+  to {
+    box-shadow: 0 0 60px #c78030;
+  }
+}
+@keyframes splash {
+  from {
+    box-shadow: 0 0 10px #c78030;
+  }
+  to {
+    box-shadow: 0 0 60px #c78030;
+  }
+}
+.fades {
+  -webkit-animation-name: fade;
+  animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fades {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
 }

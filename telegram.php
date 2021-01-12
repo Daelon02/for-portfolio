@@ -1,32 +1,28 @@
 <?php
- 
-//Переменная $name,$phone, $mail получает данные при помощи метода POST из формы
-$name = $_POST['user-name'];
-$email = $_POST['user_email'];
-$title = $_POST['user_title'];
- 
-//в переменную $token нужно вставить токен, который нам прислал @botFather
-$token = "1509208531:AAGtyzlfLldE1OTEJtggnyTv3N3zjHTw_7A";
- 
-//нужна вставить chat_id 
-$chat_id = "-496705444";
- 
-//Далее создаем переменную, в которую помещаем PHP массив
-$arr = array(
-  'Username: ' => $name,
-  'Email: ' => $email,
-  'Title: ' => $title
-);
- 
-//При помощи цикла перебираем массив и помещаем переменную $txt текст из массива $arr
-$txt = "<pre>";
-foreach($arr as $key => $value) {
-    $txt .= "<b>".$key."</b>".$value."\n".$title;
-};
-$txt .= "</pre>";
-$txt = urlencode($txt);
- 
-//Осуществляется отправка данных в переменной $sendToTelegram
-$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
- 
+
+    //Даные телеграмм
+    $token ='1509208531:AAH1AbthWUCXqDsM6EVg0pTB5ldykrNeadQ';
+    $chatid = '-496705444';   
+        
+    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+     
+    //data from forms
+    $name = trim($_POST['name']);
+    $email = trim($_POST['email']);
+    $title = trim($_POST['title']);
+     
+    // Message
+    $tmtext = array(
+    "Name" => $name,
+    "Email" => $email,
+    "Title" => $title
+    );
+    //putting everything into a message
+    $txt='';
+    foreach($tmtext as $key => $value) { 
+         $txt .= "".$key.": ".$value."%0A"; 
+      }
+    #Send message
+    fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chatid}&parse_mode=html&text={$txt}","r");
+     
 ?>

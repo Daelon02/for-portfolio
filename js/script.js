@@ -11,6 +11,7 @@ let form = document.querySelector('.form'),
     input = form.getElementsByTagName('input'),
     textArea = form.getElementsByClassName('text_area'),
     statusMessage = document.createElement('div'),
+    contactForm = document.getElementById('form'),
     contactInput = document.getElementsByTagName('input');
 
     statusMessage.classList.add('status');
@@ -76,6 +77,7 @@ let form = document.querySelector('.form'),
 }
 
 sendForm(form);
+sendForm(contactForm);
 
 //Tabs
 let tab = document.querySelectorAll('.info-header-tab'),
@@ -150,7 +152,7 @@ let tab = document.querySelectorAll('.info-header-tab'),
         });
     });
 
-  
+  //Swiper for mobile devices
       $(window).resize(function() {
         if(document.documentElement.clientWidth <= 576) {
             let swiper = document.querySelector('.swiper'),
@@ -158,8 +160,7 @@ let tab = document.querySelectorAll('.info-header-tab'),
             swiper.classList.remove('hide');
             swiper.classList.add('show');
             images.classList.add('hide');
-            images.classList.remove('show');
-            sessionStorage.setItem('width', swiper.style.display); // сохраняем значение в ключ hide
+            images.classList.remove('show');// сохраняем значение в ключ hide
         }
       });
 
@@ -171,7 +172,6 @@ let tab = document.querySelectorAll('.info-header-tab'),
             swiper.classList.remove('show');
             images.classList.remove('hide');
             images.classList.add('show');
-            sessionlStorage.removeItem('width', swiper.style.display);
           }
       });
 });
