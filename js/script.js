@@ -20,7 +20,7 @@ let form = document.querySelector('.form'),
             e.preventDefault();
                 elem.appendChild(statusMessage);
                 let formData = new FormData(elem);
-
+            
                 function postData(data) {
 
                 return new Promise(function(resolve, reject) {
@@ -149,4 +149,27 @@ let tab = document.querySelectorAll('.info-header-tab'),
             document.body.style.overflow = 'hidden';
         });
     });
+
+  
+      $(window).resize(function() {
+        if(document.documentElement.clientWidth <= 576) {
+            let swiper = document.querySelector('.swiper'),
+                images = document.querySelector('.images');
+            swiper.classList.remove('hide');
+            swiper.classList.add('show');
+            images.classList.add('hide');
+            images.classList.remove('show');
+        }
+      });
+
+      $(window).resize(function() {
+        if(document.documentElement.clientWidth > 1200) {
+            let swiper = document.querySelector('.swiper'),
+                images = document.querySelector('.images');
+            swiper.classList.add('hide');
+            swiper.classList.remove('show');
+            images.classList.remove('hide');
+            images.classList.add('show');
+          }
+      });
 });

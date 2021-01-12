@@ -351,3 +351,20 @@ h1, h2, h3, h4, h5, h6 {
 .description-btn {
   background-color: blue;
 }
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.swipe-wrap > div {
+  float: left;
+  width: 100%;
+  position: relative;
+}
