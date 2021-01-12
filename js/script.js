@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-let message = {
-    loading: 'Загрузка...',
-    success: 'Спасибо! Скоро мы с вами свяжемся!',
-    failure: 'Что-то пошло не так...'
+//Form
+
+    let message = {
+    loading: 'Loading...',
+    success: 'Thanks! We will contact you soon!',
+    failure: 'Something was wrong...'
 };
 
 let form = document.querySelector('.form'),
     input = form.getElementsByTagName('input'),
+    textArea = form.getElementsByClassName('text_area'),
     statusMessage = document.createElement('div'),
     contactInput = document.getElementsByTagName('input');
 
@@ -22,7 +25,7 @@ let form = document.querySelector('.form'),
 
                 return new Promise(function(resolve, reject) {
                     let request = new XMLHttpRequest();
-                    request.open('POST', 'server.php');
+                    request.open('POST', 'telegram.php');
                     request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
                     // Without AJAX request.setRequestHeader('Content-Type', 'application/x-www-urlencoded');
 
@@ -57,12 +60,18 @@ let form = document.querySelector('.form'),
             input[i].value = '';
         }
     }
+    function clearTextArea() {
+        for(let i = 0; i < textArea.length; i++) {
+            textArea[i].value = '';
+        }
+    }
 
     postData(formData)
     .then(() => statusMessage.innerHTML = message.loading)
     .then(() => statusMessage.innerHTML = message.success)
     .catch(() => statusMessage.innerHTML = message.failure)
     .then(clearInput)
+    .then(clearTextArea)
     })
 }
 
@@ -103,4 +112,41 @@ let tab = document.querySelectorAll('.info-header-tab'),
             }
         });
     });
-})
+
+    let navCollapse = document.querySelector('.navbar-collapse'),
+        navToggler = document.getElementById('navToggler');
+    navToggler.addEventListener('click', function() {
+        if (navCollapse > 350) {
+            navCollapse.getElementsByClassName.width = "350px";
+        } else{
+            navCollapse.children[0].children[0].removeAttribute("style");
+        } 
+    });
+        //Modal
+
+        let more = document.querySelector('.more'),
+        overlay = document.querySelector('.overlay'),
+        close = document.querySelector('.popup-close'),
+        descriptionBtn = document.querySelectorAll('.description-btn');
+
+        more.addEventListener('click', function() {
+            overlay.style.display = 'block';
+            this.classList.add('more-splash');
+            document.body.style.overflow = 'hidden';
+        });
+
+
+        close.addEventListener('click', function() {
+            overlay.style.display = 'none';
+            more.classList.remove('more-splash');
+            document.body.style.overflow = '';
+        })
+
+        descriptionBtn.forEach.call(descriptionBtn,function(descript) {
+        descript.addEventListener('click', function() {
+            overlay.style.display = 'block';
+            this.classList.add('description-btn-splash');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+});

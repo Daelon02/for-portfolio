@@ -21,11 +21,12 @@
           <a class="navbar-brand col-6 ms-5" href="#">
             <img src="img/logo.PNG" alt="#" width="50" height="40">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" id="navToggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse col-4 " id="navbarSupportedContent" style="width: 650px;">
-            <ul class="navbar-nav collapse navbar-collapse info-header" id="navbarSupportedContent">
+          <div class="navbar-width">
+          <div class="collapse navbar-collapse col-4 statistic navbar-width" id="navbarSupportedContent">
+            <ul class="navbar-nav collapse navbar-collapse info-header text-center" id="navbarSupportedContent">
                       <li class="nav-item nav-text ms-4">
                         <a class="nav-link info-header-tab" href="#">HOME</a>
                       </li>
@@ -39,19 +40,14 @@
                         <a class="nav-link info-header-tab" href="#">PROCESS</a>
                       </li>
                       <li class="nav-item nav-text ms-4">
-                        <a class="nav-link info-header-tab" href="#">SERVICES</a>
-                      </li>
-                      <li class="nav-item nav-text ms-4">
-                        <a class="nav-link info-header-tab" href="#">TESTIMONIALS</a>
-                      </li>
-                      <li class="nav-item nav-text ms-4">
                         <a class="nav-link info-header-tab" href="#">CONTACT</a>
                       </li>
         </div>
       </div>
+      </div>
       </nav>
 
-      <div class="info-tabcontent fade">
+      <div class="info-tabcontent fade active show">
       <div class="container">
         <div class="col-12">
           <p class="font-home text-center mt-5">Frontend Developer</p>
@@ -73,6 +69,84 @@
       <img src="img/04550.jpg" class="rounded img-size grow">
     </div>
 
+
+    <div class="container-fluid info-tabcontent fade">
+      <div class="me">
+        <p class="font-home text-center mt-5 p-5" style="color: #fff;">Gubin Nikita</p>
+          <p class="contact-text text-center m-0 pb-5" style="color: #fff;">I am a Frontend Developer based in Kharkiv, specializing</br>
+            in Frontend Development.</p>
+      </div>
+      <div class="my-works">
+          <div class="row p-5 ms-5">
+            <div class="col-3">
+              <img src="img/pe-7s-portfolio.png" class="rounded float-start pe-3">
+              <p class="main-tx-footer me-5">9</p>
+              <p class="skills-text">PROJECTS COMPLETED</p>
+            </div>
+              <div class="col-3">
+                <img src="img/pe-7s-clock.png" class="rounded float-start pe-3">
+                <p class="main-tx-footer me-5">544</p>
+                <p class="skills-text">WORKING AND PRACTICE HOURS</p>
+              </div>
+              <div class="col-3">
+                <img src="img/pe-7s-star.png" class="rounded float-start pe-3">
+                <p class="main-tx-footer me-5">12</p>
+                <p class="skills-text mb-5">POSITIVE FEEDBACKS</p>
+              </div>
+              <div class="col-3">
+                <img src="img/pe-7s-like.png" class="rounded float-start pe-3">
+                <p class="main-tx-footer me-5">16</p>
+                <p class="skills-text">HAPPY CLIENTS</p>
+              </div>
+          </div>
+    </div>
+    
+    <div class="words mb-5 rounded">
+    <div class="row">
+      <div class="col-6">
+        <img src="img/04748.jpg" alt="#" class="imga">
+      </div>
+      <div class="col-6 text-bottom align-middle">
+        <p class="about-text-lg text-center">About me</p>
+        <p class="contact-text text-center">Given let waters air sea had you'll, may seed abundantly fish.</br>
+          Were, you'll earth forth winged above brought. Own darkness </br>
+          they're him can't fourth sea place have.</p>
+        <p class="contact-text text-center"> So the above May stars cattle fruitful face shall. Tree it, winged. </br>
+          Every signs male firmament us. Morning him.</p>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <p class="about-text-lg my-5">Need a Project?</p>
+    <p class="contact-text my-5">Let us know what you're looking for in an agency. We'll take a look and see</br> 
+      if this could be the start of something beautiful.</p>
+    <button class="more btn btn-primary description-btn my-5 p-3 skills-text">LET`S TALK</button>
+
+  </div>
+  <div class="overlay fade">
+    <div class="popup">
+     <div class="popup-close">&times;
+     </div>
+     <div class="popup-title">
+     Форма обратной связи</div>
+       <div class="popup-form">	
+         <form action="#" class="main-form">
+           <div class="popup-form-header">
+             Узнайте больше о своём отдыхе
+           </div>
+             <label class="popup-form__label" for="phone">
+             Введите ваш номер телефона:
+             </label>
+             <input class="popup-form__input" name="phone" type="tel" required placeholder="+7(978) 973 33 45">
+             <button class="button popup-form__btn">
+               Оставить заявку!
+             </button>
+         </form>
+       </div>
+    </div>
+</div>
+</div>
+
   <div class="container info-tabcontent fade">
     <div class="row justify-content-around my-5 align-items-start">
     <div class="col-8 col-sm">
@@ -86,25 +160,27 @@
         <p class="contact-text"><b>Email:</b> <a href="mailto:gubin0202@gmail.com">  gubin0202@gmail.com</a></p>
         <p class="contact-text"><b>Fax: </b><a href="fax:+44987065909">+44 987 065 909</a></p>
     </div>
-    <form class="col-lg-8 mx-auto">
+    <div class="col-lg-8 mx-auto">
+    <form action="/telegram.php" method="POST" class="form">
       <div class="row col-12">
-        <div class="col-6 form">
-          <input required type="name" name="name" class="form-control" placeholder="Your Name">
+        <div class="col-6">
+          <input required type="text" name="Name" class="form-control" placeholder="Your Name">
         </div>
         <div class="col-6">
-          <input required type="email" name="email" class="form-control mx-4" placeholder="Your Email">
+          <input required type="text" name="Email" class="form-control mx-4" placeholder="Your Email">
         </div>
       </div>
       <div class="col-12 my-5">
-        <input required type="text" name="text" class="form-control" placeholder="Your Title">
+        <input required type="text" name="Title" class="form-control" placeholder="Your Title">
       </div>
       <div class="form-floating">
-        <textarea class="form-control" placeholder="Your Comments" id="floatingTextarea2" style="height: 100px"></textarea>
+        <textarea required class="form-control text_area" placeholder="Your Comments" id="floatingTextarea2" style="height: 100px"></textarea>
         <label for="floatingTextarea2">Your Comments</label>
       </div>
       <button type="submit" class="btn btn-primary my-3 btn-send-form p-3">SEND MESSAGE</button>
-    </div>
     </form>
+  </div>
+  </div>
     <div id="map-container-google-1" class=" map-container" style="height: 500px">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164153.5222908598!2d36.14574355333575!3d49.99450702755198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a09f63ab0f8b%3A0x2d4c18681aa4be0a!2z0KXQsNGA0YzQutC-0LIsINCl0LDRgNGM0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0Yw!5e0!3m2!1sru!2sua!4v1610164790696!5m2!1sru!2sua" 
        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -119,7 +195,7 @@
     <div class="row">
       <div class="col-4">
       <p class="main-tx-footer">Daelon Inc.</p>
-        <p class="text-muted footer-contacts">© 2021 Daelon. All rights reserved.</br>
+        <p class="text-muted">© 2021 Daelon. All rights reserved.</br>
           Designed by @VDumch.</p>
         </div>
       <div class="col-3">
@@ -150,6 +226,7 @@
 
 
     <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.12.0/underscore-min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </body>
