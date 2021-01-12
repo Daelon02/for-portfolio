@@ -57,15 +57,15 @@
       </div>
       <div class="images show fade">
       <img src="img/04748.jpg" class="rounded img-size grow">
-      <img src="img/Agnecy Landing Page_Main File.jpg" class="rounded img-size grow">
+      <img src="img/ParkEagles_landing page.jpg" class="rounded img-size grow">
       <img src="img/bikes.jpg" class="rounded img-size grow">
       <img src="img/04550.jpg" class="rounded img-size grow">
-      <img src="img/Agnecy Landing Page_Main File.jpg" class="rounded img-size grow">
+      <img src="img/ParkEagles_landing page.jpg" class="rounded img-size grow">
       <img src="img/04748.jpg" class="rounded img-size grow">
       <img src="img/04550.jpg" class="rounded img-size grow">
       <img src="img/bikes.jpg" class="rounded img-size grow">
       <img src="img/04748.jpg" class="rounded img-size grow">
-      <img src="img/Agnecy Landing Page_Main File.jpg" class="rounded img-size grow">
+      <img src="img/ParkEagles_landing page.jpg" class="rounded img-size grow">
       <img src="img/bikes.jpg" class="rounded img-size grow">
       <img src="img/04550.jpg" class="rounded img-size grow">
       </div>
@@ -163,23 +163,27 @@
     <button class="more btn btn-primary description-btn my-5 p-3 skills-text">LET`S TALK</button>
 
   </div>
-  <div class="overlay fade">
+  <div class="overlay fades">
     <div class="popup">
      <div class="popup-close">&times;
      </div>
      <div class="popup-title">
-     Форма обратной связи</div>
+     Form feedback</div>
        <div class="popup-form">	
-         <form action="#" class="main-form">
-           <div class="popup-form-header">
-             Узнайте больше о своём отдыхе
+         <form action="/telegram.php" id="form">
+           <div class="popup-form-header font-home">
+            Leave the details if you need a Project
            </div>
-             <label class="popup-form__label" for="phone">
-             Введите ваш номер телефона:
+             <label class="popup-form__label skills-text" for="name">
+             Write your name:
              </label>
-             <input class="popup-form__input" name="phone" type="tel" required placeholder="+7(978) 973 33 45">
+             <input class="popup-form__input" name="name" type="tel" required placeholder="Your Name">
+             <label class="popup-form__label skills-text" for="email">
+              Write your email:
+              </label>
+              <input class="popup-form__input" name="email" type="tel" required placeholder="Your Email">
              <button class="button popup-form__btn">
-               Оставить заявку!
+              Send a request!
              </button>
          </form>
        </div>
@@ -201,17 +205,17 @@
         <p class="contact-text"><b>Fax: </b><a href="fax:+44987065909">+44 987 065 909</a></p>
     </div>
     <div class="col-lg-8 mx-auto">
-    <form action="/telegram.php" method="POST" class="form">
+    <form action="telegram.php" method="post" class="form" enctype="multipart/form-data">
       <div class="row col-12">
         <div class="col-6">
-          <input required type="text" name="user_name" class="form-control" placeholder="Your Name">
+          <input required type="text" name="name" class="form-control" placeholder="Your Name">
         </div>
         <div class="col-6">
-          <input required type="text" name="user_email" class="form-control mx-4" placeholder="Your Email">
+          <input required type="text" name="email" class="form-control mx-4" placeholder="Your Email">
         </div>
       </div>
       <div class="col-12 my-5">
-        <input required type="text" name="user_title" class="form-control" placeholder="Your Title">
+        <input required type="text" name="title" class="form-control" placeholder="Your Title">
       </div>
       <div class="form-floating">
         <textarea required class="form-control text_area" placeholder="Your Comments" id="floatingTextarea2" style="height: 100px"></textarea>
@@ -230,7 +234,7 @@
 
 
 
-<footer class="footer mt-auto p-5 bg-dark">
+<footer class="footer mt-auto p-5 bg-dark mt-5" style="position: relative; top: 25px;">
   <div class="container">
     <div class="row">
       <div class="col-4">
