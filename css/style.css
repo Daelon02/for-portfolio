@@ -456,7 +456,7 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     z-index: 4;
     left: 50%;
-    top: 100px;
+    top: 25px;
     width: 350px;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
