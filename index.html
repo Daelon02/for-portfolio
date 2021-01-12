@@ -15,7 +15,17 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
-  <div class="contact">
+  <div id="cube-loader" class="fade hide">
+    <div class="caption">
+      <div class="cube-loader">
+        <div class="cube loader-1"></div>
+        <div class="cube loader-2"></div>
+        <div class="cube loader-4"></div>
+        <div class="cube loader-3"></div>
+      </div>
+    </div>
+  </div>
+  <div class="contact hide" id="contact">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand col-6 ms-5" href="#">
@@ -208,14 +218,14 @@
     <form action="telegram.php" method="post" class="form" enctype="multipart/form-data">
       <div class="row col-12">
         <div class="col-6">
-          <input required type="name" name="name" class="form-control" placeholder="Your Name">
+          <input required type="name" value="" name="name" class="form-control" placeholder="Your Name">
         </div>
         <div class="col-6">
-          <input required type="email" name="email" class="form-control mx-4" placeholder="Your Email">
+          <input required type="email" value="" name="email" class="form-control mx-4" placeholder="Your Email">
         </div>
       </div>
       <div class="col-12 my-5">
-        <input required type="title" name="title" class="form-control" placeholder="Your Title">
+        <input required type="title" value="" name="title" class="form-control" placeholder="Your Title">
       </div>
       <div class="form-floating">
         <textarea required class="form-control text_area" placeholder="Your Comments" id="floatingTextarea2" style="height: 100px"></textarea>
@@ -230,43 +240,42 @@
        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
   </div>
+  <footer class="footer mt-auto p-5 bg-dark mt-5" style="position: relative; top: 25px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+        <p class="main-tx-footer">Daelon Inc.</p>
+          <p class="text-muted">© 2021 Daelon. All rights reserved.</br>
+            Designed by <a href="https://t.me/VDumch" style="color: #585858;">@VDumch</a>.</p>
+          </div>
+        <div class="col-3">
+          <p class="footer-contacts"><a href="mailto:gubin0202@gmail.com" style="color: #fff;">gubin0202@gmail.com</a></p>
+          <p class="footer-contacts"><a href="tel:+380965223873" style="color: #fff;">+380965223873</a></p>
+        </div>
+        <div class="col-1 position-relative" style="right: 75px;">
+          <a href="#" class="footer-sect">Projects</a></br>
+          <a href="#" class="footer-sect">About</a></br>
+          <a href="#" class="footer-sect">Services</a></br>
+          <a href="#" class="footer-sect">Carreer</a></br>
+        </div>
+        <div class="col-2 position-relative" style="right: 25px;">
+          <a href="#" class="footer-sect">News</a></br>
+          <a href="#" class="footer-sect">Events</a></br>
+          <a href="#" class="footer-sect">Contacts</a></br>
+          <a href="#" class="footer-sect">Legals</a></br>
+        </div>
+        <div class="col-2">
+          <a href="#" class="footer-sect">Facebook</a></br>
+          <a href="https://t.me/Daelon02" class="footer-sect">Telegram</a></br>
+          <a href="https://www.instagram.com/daelon_gn/" class="footer-sect">Instagram</a></br>
+          <a href="https://www.linkedin.com/in/nikita-gubin-a00210200/" class="footer-sect">LinkedIn</a></br>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
 
 
-
-<footer class="footer mt-auto p-5 bg-dark mt-5" style="position: relative; top: 25px;">
-  <div class="container">
-    <div class="row">
-      <div class="col-4">
-      <p class="main-tx-footer">Daelon Inc.</p>
-        <p class="text-muted">© 2021 Daelon. All rights reserved.</br>
-          Designed by <a href="https://t.me/VDumch" style="color: #585858;">@VDumch</a>.</p>
-        </div>
-      <div class="col-3">
-        <p class="footer-contacts"><a href="mailto:gubin0202@gmail.com" style="color: #fff;">gubin0202@gmail.com</a></p>
-        <p class="footer-contacts"><a href="tel:+380965223873" style="color: #fff;">+380965223873</a></p>
-      </div>
-      <div class="col-1 position-relative" style="right: 75px;">
-        <a href="#" class="footer-sect">Projects</a></br>
-        <a href="#" class="footer-sect">About</a></br>
-        <a href="#" class="footer-sect">Services</a></br>
-        <a href="#" class="footer-sect">Carreer</a></br>
-      </div>
-      <div class="col-2 position-relative" style="right: 25px;">
-        <a href="#" class="footer-sect">News</a></br>
-        <a href="#" class="footer-sect">Events</a></br>
-        <a href="#" class="footer-sect">Contacts</a></br>
-        <a href="#" class="footer-sect">Legals</a></br>
-      </div>
-      <div class="col-2">
-        <a href="#" class="footer-sect">Facebook</a></br>
-        <a href="https://t.me/Daelon02" class="footer-sect">Telegram</a></br>
-        <a href="https://www.instagram.com/daelon_gn/" class="footer-sect">Instagram</a></br>
-        <a href="https://www.linkedin.com/in/nikita-gubin-a00210200/" class="footer-sect">LinkedIn</a></br>
-      </div>
-    </div>
-  </div>
-</footer>
 
 
     <script src="js/script.js"></script>

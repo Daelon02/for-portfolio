@@ -13,9 +13,9 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
      
     //Data from form
-    $name = trim($_POST['name']);
-    $email = trim($_POST['email']);
-    $title = trim($_POST['title']);
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $title = $_POST['title'];
      
     // Message
     $tmtext = array(
@@ -30,6 +30,8 @@
       }
     #Send message
     fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chatid}&parse_mode=html&text={$txt}","r");
+    } else {
+      echo 'console.log('. json_encode( $name ) .')';
     }
      
 ?>

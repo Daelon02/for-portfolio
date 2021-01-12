@@ -77,12 +77,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var tab = document.querySelectorAll('.info-header-tab'),
       info = document.querySelectorAll('.info-header'),
-      tabContent = document.querySelectorAll('.info-tabcontent');
+      tabContent = document.querySelectorAll('.info-tabcontent'),
+      preloaderEl = document.getElementById('cube-loader');
 
   function hideTabContent(a) {
     for (var i = a; i < tabContent.length; i++) {
       tabContent[i].classList.remove('show');
       tabContent[i].classList.add('hide');
+      preloaderEl.classList.remove('hide');
+      preloaderEl.classList.add('visible');
     }
   }
 
@@ -92,6 +95,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (tabContent[b].classList.contains('hide')) {
       tabContent[b].classList.remove('hide');
       tabContent[b].classList.add('show');
+      preloaderEl.classList.add('hide');
+      preloaderEl.classList.remove('visible');
     }
   }
 
@@ -162,4 +167,22 @@ document.addEventListener('DOMContentLoaded', function () {
       images.classList.add('show');
     }
   });
+
+  window.onload = function () {
+    var preloaderEl = document.getElementById('cube-loader'),
+        contact = document.getElementById('contact');
+
+    if (window = "load") {
+      window.setTimeout(function () {
+        preloaderEl.classList.add('hide');
+        preloaderEl.classList.remove('visible');
+        contact.classList.remove('hide');
+      }, 2000);
+      console.log('Всё сработало!');
+    } else {
+      console.log('Не сработало!');
+    }
+
+    ;
+  };
 });
